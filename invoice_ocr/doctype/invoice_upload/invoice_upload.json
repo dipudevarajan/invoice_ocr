@@ -1,0 +1,69 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 0,
+ "autoname": "INV-OCR-.YYYY.-.#####",
+ "creation": "2026-05-23 12:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "file",
+  "ocr_status",
+  "purchase_invoice",
+  "extracted_data"
+ ],
+ "fields": [
+  {
+   "fieldname": "file",
+   "fieldtype": "Attach Image",
+   "label": "Upload Invoice Scan",
+   "reqd": 1
+  },
+  {
+   "default": "Pending",
+   "fieldname": "ocr_status",
+   "fieldtype": "Select",
+   "label": "OCR Status",
+   "options": "Pending\nProcessing\nExtracted\nFailed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "purchase_invoice",
+   "fieldtype": "Link",
+   "label": "Linked Purchase Invoice",
+   "options": "Purchase Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "extracted_data",
+   "fieldtype": "Code",
+   "label": "Extracted JSON Metadata",
+   "options": "JSON",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-23 12:00:00",
+ "modified_by": "Administrator",
+ "module": "Invoice OCR",
+ "name": "Invoice Upload",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
