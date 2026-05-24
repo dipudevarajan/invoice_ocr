@@ -1,2 +1,2 @@
 
-Invoice OCR
+invoice_ocr
